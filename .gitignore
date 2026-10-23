@@ -1,0 +1,24 @@
+# Godot
+.godot/
+.import/
+export_credentials.cfg
+
+# Android signing: never commit these
+*.keystore
+*.jks
+
+# Build output
+*.apk
+*.apk.idsig
+*.aab
+builds/
+android/
+
+# OS cruft and editors
+Thumbs.db
+.DS_Store
+.vscode/
+*.tmp
+
+# Claude Code local files
+.claude/settings.local.json

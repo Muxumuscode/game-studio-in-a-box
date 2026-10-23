@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.config/gcloud/**)",
+      "Read(~/.git-credentials)",
+      "Read(**/*.keystore)",
+      "Read(**/*.jks)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/tools/cloud_setup.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
